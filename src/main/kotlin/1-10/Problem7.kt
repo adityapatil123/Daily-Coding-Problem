@@ -1,78 +1,37 @@
-//The question we'll work through is the following: return a new sorted merged list from K sorted lists, each with size N.
-// Before we move on any further, you should take some time to think about the solution!
+//Given the mapping a = 1, b = 2, ... z = 26, and an encoded message, count the number of ways it can be decoded.
 //
-//First, go through an example.
-// This buys time, makes sure you understand the problem, and lets you gain some intuition for the problem.
-// For example, if we had [[10, 15, 30], [12, 15, 20], [17, 20, 32]], the result should be [10, 12, 15, 15, 17, 20, 20, 30, 32].
-var smallest:Int = Int.MAX_VALUE
+//For example, the message '111' would give 3, since it could be decoded as 'aaa', 'ka', and 'ak'.
+//
+//You can assume that the messages are decodable. For example, '001' is not allowed.
 
-fun sortAndMerge(listOfList: Array<Array<Int>>):Array<Int?>
-{
-    var noOfElem = 0
-    listOfList.forEach { internalArray ->
-        noOfElem += internalArray.size
-    }
+fun getNoOfDecodingWays(str:String):Int{
+    val charList = str.toCharArray()
+    val intList:List<Int> = charList.map{ it.toInt() - 48 }
 
-
-    val mergeList= arrayOfNulls<Int>(noOfElem)
-
-    val noOfLists = listOfList.size
-    val ptr = arrayOfNulls<Int>(noOfLists)
-    ptr.fill(0,0,noOfLists)
-    var arr = arrayOfNulls<Int>(noOfLists)
-
-
-    for(j in 0..noOfElem-1) {
-        for (i in 0..noOfLists - 1) {
-            try {
-                arr.set(i,(listOfList[i][ptr[i]!!]))
-            } catch (e: Exception) {
-                arr.set(i,Int.MAX_VALUE)
-//                println("Exception")
-            }
-        }
-
-        if(arr.size != 1) {
-            for (i in arr.size / 2 - 1 downTo 0)
-                arr = heapify(arr, arr.size, i)
-
-
-            ptr[smallest] = ptr[smallest]!!.plus(1)
-        }
-
-        val min = arr[0]
-        mergeList.set(j,min)
-
-
-    }
-    return mergeList
+    return getRecursiveDecoding(intList).first!!
 }
 
-fun heapify(arr: Array<Int?>, n:Int, i:Int):Array<Int?>{
-    if(arr.isNullOrEmpty())
-        return arrayOfNulls(n)
+fun getRecursiveDecoding(list: List<Int>):Pair<Int?,Int>
+{
+    val listSize = list.size
+    var last = 0
+    var noOfWays = 0
 
-    smallest = i
-    val l = 2 * i + 1
-    val r = 2 * i + 2
-    var newArray = arr
-    // if left child is larger than root
-    if (l < n && arr[l]!! < arr[smallest]!!)
-        smallest = l
-
-    // if right child is larger than largest so far
-    if (r < n && arr[r]!! < arr[smallest]!!)
-        smallest = r
-
-    // if largest is not root
-    if (smallest != i) {
-        val temp = arr[i]
-        arr[i] = arr[smallest]
-        arr[smallest] = temp
-//        swap(arr[i], arr[largest])
-
-        // recursively heapify the affected sub-tree
-        newArray = heapify(arr, n, smallest)
+    if(list.isEmpty())
+        return Pair(null, 0)
+    else if(listSize == 1)
+        return Pair(1, list[0])
+    else{
+        val tailList = list.slice(1..listSize-1)
+        noOfWays = getRecursiveDecoding(tailList).first!!
+        last = getRecursiveDecoding(tailList).second
+        val num =  list[0]*10 + last
+        if(num > 0 && num < 27)
+            noOfWays++
+        return Pair(noOfWays, list[0])
     }
-    return newArray
+}
+
+fun main(){
+    println(getNoOfDecodingWays(""))
 }
