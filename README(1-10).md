@@ -1,5 +1,5 @@
 # Daily-Coding-Problems 1-10
-Solutions to problems sent by dailycodingproblem.com
+Solutions to problems sent by dailycodingproblem.com solved in **Kotlin** with **JUnit** test cases.
 
 ## Problem 1
 Given a list of numbers, return whether any two sums to k. 
@@ -8,7 +8,6 @@ For example, given [10, 15, 3, 7] and k of 17, return true since 10 + 7 is 17.
 Bonus: Can you do this in one pass?
 
 [Solution:](https://github.com/adityapatil123/Daily-Coding-Problems/blob/master/src/main/kotlin/1-10/Problem1.kt)
-[Test Unit Cases](https://github.com/adityapatil123/Daily-Coding-Problems/blob/master/src/test/kotlin/1-10/Problem1KtTest.kt)
 
 - **Brute force method O(n2)** Used nested for-loops
 - **Using HashSet O(n)** In linear time, value will be checked and added in HashSet
