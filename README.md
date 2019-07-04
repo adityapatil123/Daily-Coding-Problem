@@ -107,6 +107,13 @@ For example, the message '111' would give 3, since it could be decoded as 'aaa',
 
 You can assume that the messages are decodable. For example, '001' is not allowed.
 
+[Solution:](https://github.com/adityapatil123/Daily-Coding-Problems/blob/master/src/main/kotlin/1-10/Problem7.kt)
+- Make string to char-array and from char-array to list of integers.
+- List of integers will be traversed recursively, with checking of arr[0] and lastElem if they are in 1 to 26,which is nothing but arr[0] from inner recursive cycle.
+- Recursion will be stopped when list_length becomes 1.
+
+[Test Unit Cases](https://github.com/adityapatil123/Daily-Coding-Problems/blob/master/src/test/kotlin/1-10/Problem7KtTest.kt)
+
 ## Problem 8
 This problem was asked by Google.
 
@@ -166,10 +173,10 @@ For brute-force method, time complexity for that would be O(KN log KN), since we
 
 Use heap,The time complexity for this would be O(KN log K), since we remove and append to the heap K * N times.
 
-[Solution:](https://github.com/adityapatil123/Daily-Coding-Problems/blob/master/src/main/kotlin/1-10/Problem7.kt)
+[Solution:](https://github.com/adityapatil123/Daily-Coding-Problems/blob/master/src/main/kotlin/1-10/Solved1.kt)
 
 - Since, K arrays are already sorted, we just have to check element from one element from each k array.
 - For that pinter array is used which points to checking element of every array.
 - If element is added to output array pinter will be move forward till-end
 
-[Test Unit Cases](https://github.com/adityapatil123/Daily-Coding-Problems/blob/master/src/test/kotlin/1-10/Problem7KtTest.kt)
+[Test Unit Cases](https://github.com/adityapatil123/Daily-Coding-Problems/blob/master/src/test/kotlin/1-10/Solved1KtTest.kt)
