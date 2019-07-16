@@ -119,3 +119,9 @@ fun getMaximumLengthOfPath(node: FileSystemNode):Pair<Int, Boolean>
     }
     return Pair(maxLength, isFileInPath)
 }
+
+fun getMaxLengthFromGivenStringTree(currentFilePath:String):Int
+{
+    val node = getTreeFromString(currentFilePath)
+    return getMaximumLengthOfPath(node).first
+}
