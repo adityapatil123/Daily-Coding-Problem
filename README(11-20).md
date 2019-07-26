@@ -11,7 +11,6 @@ For example, given the query string de and the set of strings [dog, deer, deal],
 Hint: Try preprocessing the dictionary into a more efficient data structure to speed up queries.
 
 [Solution:](https://github.com/adityapatil123/Daily-Coding-Problems/blob/master/src/main/kotlin/11-20/Problem11.kt)
-
 - Using **CharNode** class, created node objects of character.
 - We will create where each level of it will be index of word added.
 - In function **addNode**, we will add character node if at that level character is not there
@@ -36,7 +35,6 @@ For example, if N is 4, then there are 5 unique ways:
 What if, instead of being able to climb 1 or 2 steps at a time, you could climb any number from a set of positive integers X? For example, if X = {1, 3, 5}, you could climb 1, 3, or 5 steps at a time.
 
 [Solution:](https://github.com/adityapatil123/Daily-Coding-Problems/blob/master/src/main/kotlin/11-20/Problem12.kt)
-
 Here, 2 functions for 1 or 2 steps, and for other array of steps, using func **getStepsLastSecondLast** which will return lastNoSteps and secondLastNoSteps, which will be added at every recursion step.
 - **getStepsFor1_2 :** Time complexity is O(n) here.
 - **getStepsForAny :** Here, time complexity is O(n2). For each stepSize, steps will be added.
@@ -51,7 +49,6 @@ Given an integer k and a string s, find the length of the longest substring that
 For example, given s = "abcba" and k = 2, the longest substring with k distinct characters is "bcb".
 
 [Solution:](https://github.com/adityapatil123/Daily-Coding-Problems/blob/master/src/main/kotlin/11-20/Problem13.kt)
-
 - **getMaxSubstringRecursive** function will return maxSubstring, prevGoingOnString(string which is going on, which will be checked using maxSubstring) and Hashset for set of characters which are in maxSubstring.
 - In hashset, we will add and remove chars as substring is updated.Here hashset contains returning in O(1) time, Hence used.
 
@@ -65,7 +62,6 @@ The area of a circle is defined as r^2. Estimate \pi to 3 decimal places using a
 Hint: The basic equation of a circle is x^2 + y^2 = r^2.
 
 [Solution:](https://github.com/adityapatil123/Daily-Coding-Problems/blob/master/src/main/kotlin/11-20/Problem14.kt)
-
 Monte Carlo method is nothing but finding area of circle by taking no of points, pi = 4*(pts lying in circle)/totalPts
 2 functions :
 1. Estimating by order of points i.e. x in 0.100 and y in 0..100
@@ -78,8 +74,7 @@ This problem was asked by Facebook.
 
 Given a stream of elements too large to store in memory, pick a random element from the stream with uniform probability.
 
-[Solution:](https://github.com/adityapatil123/Daily-Coding-Problems/blob/master/src/main/kotlin/1-10/Problem5.kt)
-
+[Solution:](https://github.com/adityapatil123/Daily-Coding-Problems/blob/master/src/main/kotlin/11-20/Problem15.kt)
 - Given stream which will be flow of data, random element will be considered by checking which one is bigger.
 
 No Test Unit Cases here as we are just printing any element from stream.
@@ -92,7 +87,6 @@ You run an e-commerce website and want to record the last N order ids in a log. 
 record(order_id): adds the order_id to the log get_last(i): gets the ith last element from the log. i is guaranteed to be smaller than or equal to N. You should be as efficient with time and space as possible.
 
 [Solution:](https://github.com/adityapatil123/Daily-Coding-Problems/blob/master/src/main/kotlin/11-20/Problem16.kt)
-
 - Global variables **bigN** and **logList**
 - In function record, longList will add record till bigN and if greater than bigN remove first elem.
 - in function getLast, will return last element in logList.
@@ -130,7 +124,6 @@ We are interested in finding the longest (number of characters) absolute path to
 Given a string representing the file system in the above format, return the length of the longest absolute path to a file in the abstracted file system. If there is no file in the system, return 0.
 
 [Solution:](https://github.com/adityapatil123/Daily-Coding-Problems/blob/master/src/main/kotlin/11-20/Problem17.kt)
-
 - We will be making object from class **FileSystemNode**.
 - Make tree using function **getTreeFromString**.
 - Get maximum file path checking if any file extension is there from function **getMaximumLengthOfPath**.
@@ -152,7 +145,6 @@ For example, given array = [10, 5, 2, 7, 8, 7] and k = 3, we should get: [10, 7,
 Do this in O(n) time and O(k) space. You can modify the input array in-place and you do not need to store the results. You can simply print them out as you compute them.
 
 [Solution:](https://github.com/adityapatil123/Daily-Coding-Problems/blob/master/src/main/kotlin/11-20/Problem18.kt)
-
 - Create **maxValArray** array of maxVals of each sub-array, but here it not necessary that it will always have max.
 - First, print the max element of first sub-array.
 - For remaining, print max of that sub-array.

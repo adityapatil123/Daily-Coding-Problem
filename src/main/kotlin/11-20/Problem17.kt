@@ -124,4 +124,8 @@ fun getMaxLengthFromGivenStringTree(currentFilePath:String):Int
 {
     val node = getTreeFromString(currentFilePath)
     return getMaximumLengthOfPath(node).first
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 02b5edcd88dc9c2165269e03cdde353498bf8fd6
