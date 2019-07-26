@@ -1,4 +1,4 @@
-# Daily-Coding-Problems 1-10
+# Daily-Coding-Problems 11-20
 Solutions to problems sent by dailycodingproblem.com solved in **Kotlin** with **JUnit** test cases.
 
 ## Problem 11
