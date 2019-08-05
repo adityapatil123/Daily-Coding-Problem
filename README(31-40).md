@@ -139,7 +139,7 @@ You have an N by N board. Write a function that, given N, returns the number of 
 - In main function, iterate over rows, where we will place and make  recursive call for right columns.Return 1 if column exceeds n(input n).
 - In safe-checking function danger conditions will be queen is on same row, or on left upper diagonal or on left lower diagonal.  
 
-[Test Unit Cases](https://github.com/adityapatil123/Daily-Coding-Problems/blob/master/src/test/kotlin/38-40/Problem38KtTest.kt)
+[Test Unit Cases](https://github.com/adityapatil123/Daily-Coding-Problems/blob/master/src/test/kotlin/31-40/Problem38KtTest.kt)
 
 ## Problem 39
 This problem was asked by Dropbox.
@@ -177,4 +177,4 @@ Do this in O(N) time and O(1) space.
 - If those sumOfBits is not in multiple of 3, add to those bits to non-duplicate number.
 - After iterating for all, return non-duplicate number.
 
-[Test Unit Cases](https://github.com/adityapatil123/Daily-Coding-Problems/blob/master/src/test/kotlin/38-40/Problem40KtTest.kt)
+[Test Unit Cases](https://github.com/adityapatil123/Daily-Coding-Problems/blob/master/src/test/kotlin/31-40/Problem40KtTest.kt)
