@@ -20,3 +20,8 @@ Daily Coding Problems solved using Kotlin with JUnit test cases
 - [ReadMe](https://github.com/adityapatil123/Daily-Coding-Problems/blob/master/README(31-40).md)
 - [Code](https://github.com/adityapatil123/Daily-Coding-Problems/tree/master/src/main/kotlin/31-40)
 - [Test Cases](https://github.com/adityapatil123/Daily-Coding-Problems/tree/master/src/test/kotlin/31-40)
+
+## 41-50:
+- [ReadMe](https://github.com/adityapatil123/Daily-Coding-Problems/blob/master/README(41-50).md)
+- [Code](https://github.com/adityapatil123/Daily-Coding-Problems/tree/master/src/main/kotlin/41-50)
+- [Test Cases](https://github.com/adityapatil123/Daily-Coding-Problems/tree/master/src/test/kotlin/41-50)
